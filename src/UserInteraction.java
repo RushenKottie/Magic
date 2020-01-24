@@ -9,7 +9,8 @@ public class UserInteraction implements Runnable{
 
     @Override
     public void run() {
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+        try{
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите день своего рождения:");
             dayOfBirth = Integer.parseInt(reader.readLine());
             while (dayOfBirth<1||dayOfBirth>31)
@@ -28,7 +29,6 @@ public class UserInteraction implements Runnable{
         } catch (NumberFormatException | IOException e) {
             System.out.println("Перезапустите программу и введите значения в цифровом формате.");
         }
-
     }
 
     public int getDayOfBirth(){
@@ -37,5 +37,16 @@ public class UserInteraction implements Runnable{
 
     public int getHeight(){
         return height;
+    }
+
+    public static boolean tryItAgain(){
+        char symbol = 0;
+        System.out.println("\n"+"Для повторного запуска программы нажмите Enter, для завершения программы любую клавишу + Enter:");
+        InputStreamReader r = new InputStreamReader(System.in);
+        try{
+            symbol = (char) r.read();
+        }catch (IOException ignored){}
+
+        return symbol == '\n';
     }
 }
