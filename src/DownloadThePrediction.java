@@ -4,6 +4,10 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
+/**
+ * This class is responsible for parsing web-page w/ daily predictions to String array.
+ */
+
 public class DownloadThePrediction implements Runnable{
     private static Document doc;
     public static String[] magicWords;

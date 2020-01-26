@@ -2,6 +2,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * This class is responsible for interaction w/ user:
+ * printing 'action-require' messages into console,
+ * reading data from console,
+ * storing user data.
+ */
 
 public class UserInteraction implements Runnable{
     private int dayOfBirth;

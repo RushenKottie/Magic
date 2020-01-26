@@ -1,4 +1,8 @@
-
+/**
+ * This is basic class of the program.
+ * Special algorithm based on data from UserInteraction class calculates what words will be taken from
+ * DownloadThePrediction class and builds a prediction in String format.
+ */
 
 public class TheMainClass {
     public static void main(String[] args) throws InterruptedException{
